@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <meta name="description" content="">
+
+ <meta name="author" content="">
+
+ <title>Library</title>
+
+<link href="{{asset('css/adminlte.css')}}" rel="stylesheet">
+
+ <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
+ <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
+
+
+<script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+
+ <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+
+ <script type="text/javascript" src="{{asset('js/jquery-3.1.0.min.js')}}"></script> 
+
+ <!-- Latest compiled and minified CSS -->
+
+ <!-- Latest compiled and minified CSS -->
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+
+<!-- Optional theme -->
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+
+ </head><!–– /head ––>
+
+ <body>
+
+ @section('menu')
+
+ <div class="mainmenu1 col-sm-12 col-md-12 col-lg-12">
+
+ <ul class="nav nav-pills nav–justified">
+
+ <li role="presentation" {{$page == 'Main page' ? 'class=active' : ''}}>
+
+ <a href="{{url('topic/index')}}">Main Page</a>
+
+ </li>
+
+ <li role="presentation" {{$page == 'Forms' ? 'class=active' : ''}}>
+
+ <a href="{{url('block/create')}}">Content Control</a>
+
+ </li>
+
+ </ul>
+
+ </div>
+
+ @show
+
+ <div class="container col-sm-12 col-md-12 col-lg-12">
+
+ @yield('content')
+
+ </div>
+
+ </body>
+
+ </html>
